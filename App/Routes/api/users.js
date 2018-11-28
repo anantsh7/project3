@@ -26,12 +26,7 @@ router
 // logout route
 router
   .route('/logout')
-  .get(function(req,res) {
-    // Log user out
-    req.logout()
-    console.log(req.user);
-    res.json(false);
-  })
+  .get(usersController.logout);
 
 // Matches with "/api/user/:id"
 router

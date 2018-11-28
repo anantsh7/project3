@@ -50,5 +50,10 @@ module.exports = {
         console.log('user registered!');
         res.json(true);
       });
+  },
+  logout: function(req, res) {
+    req.logout();
+    const redirectPath = process.env.NODE_ENV === "production" ? "/" : "http://localhost:3000/";
+    res.redirect(redirectPath);
   }
 };

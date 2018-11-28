@@ -6,11 +6,10 @@ import Card from "./Card";
 import SearchForm from "./SearchForm";
 import CollegeDetail from "./CollegeDetail";
 import API from "../utils/API";
-import Navbar from "./Navbar";
 
 class DataContainer extends Component {
   state = {
-    result: [],
+    data: [],
     search: ""
   };
 
@@ -21,9 +20,15 @@ class DataContainer extends Component {
   searchColleges = query => {
     API.search(query)
       .then(res => {
-        console.log(res.data.results[0].school);
-        console.log(res.data.results[0].latest);
-        this.setState({ result: res.data.results[0].school })
+        var dataObj = {
+          school: res.data.results[0].school,
+          latest: res.data.results[0].latest,
+        }
+        const schoolData = [...this.state.data, dataObj]
+        this.setState({
+          data: schoolData
+        })
+        console.log(schoolData)
       })
       .catch(err => console.log(err));
   };
@@ -43,31 +48,31 @@ class DataContainer extends Component {
 
   render() {
     return (
-      <Navbar>
-        <Container>
-          <Row>
-            <Col size="md-8">
-              <Card
-                heading="Search for a College to Begin">
+      <Container>
+        <Row>
+        <Col size="md-12">
+            <Card heading="Search">
+              <SearchForm
+                value={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+              />
+            </Card>
+          </Col>
+          {this.state.data.length ? (this.state.data.map(res => (
+          <Col size="md-4">
+            <Card
+              heading="">
                 <CollegeDetail
-                  name={this.state.result.name}
-                  city={this.state.result.city}
-                  zip={this.state.result.zip}
+                  name={res.school.name}
+                  city={res.school.city}
+                  zip={res.school.zip}
                 />
-              </Card>
-            </Col>
-            <Col size="md-4">
-              <Card heading="Search">
-                <SearchForm
-                  value={this.state.search}
-                  handleInputChange={this.handleInputChange}
-                  handleFormSubmit={this.handleFormSubmit}
-                />
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </Navbar>
+            </Card>
+          </Col>
+          ))) : ""} 
+        </Row>
+      </Container>
     );
   }
 }

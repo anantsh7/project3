@@ -1,0 +1,402 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  color: #040404;
+  font-size: font-size(1);
+  font-family: Montserrat, "Helvetica Neue", Helvetica, arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400
+}
+
+button {
+  cursor: pointer
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  text-decoration: none
+}
+
+strong {
+  font-weight: 700
+}
+
+a img {
+  border: 0;
+  outline: 0
+}
+
+[aria-hidden="true"] {
+  display: none
+}
+
+@media print {
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact
+  }
+}
+
+button,
+.button,
+.share,
+.button-share.results-share,
+.school-share,
+.button-outline,
+.data-home-button,
+.button-share,
+input[type="submit"] {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  border-radius: 500px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase
+}
+
+.centered,
+figure.meter,
+.section-home-start,
+.section-home-facts,
+.section-home-numbers,
+.section-home-paying,
+.section-home-toolkit,
+.section-home-resources,
+.search_form-submit,
+.school-academics-fact {
+  text-align: center
+}
+
+.test {
+  color: yellow
+}
+
+.u-wrap {
+  max-width: 76.875em;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.u-wrap::after {
+  clear: both;
+  content: "";
+  display: table
+}
+
+.u-nowrap {
+  white-space: nowrap
+}
+
+.container,
+.u-container {
+  max-width: 76.875em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em
+}
+
+.container::after,
+.u-container::after {
+  clear: both;
+  content: "";
+  display: table
+}
+
+@media only screen and (min-width: 48em) {
+
+  .container,
+  .u-container {
+    padding-left: 1.875em;
+    padding-right: 1.875em
+  }
+}
+
+.container-collapse,
+.u-container_collapse {
+  padding-left: 0;
+  padding-right: 0
+}
+
+@media only screen and (min-width: 48em) {
+
+  .container-collapse,
+  .u-container_collapse {
+    padding-left: 1.875em;
+    padding-right: 1.875em
+  }
+}
+
+.hidden,
+.u-hidden {
+  display: none
+}
+
+.sr-only,
+legend,
+.u-sr_only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: px;
+  overflow: hidden
+}
+
+.new_line,
+.u-new_line,
+.section-home-facts li img {
+  display: block
+}
+
+ol.decimal,
+.u-ordered_list {
+  list-style-type: decimal;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.25em
+}
+
+ol.decimal li,
+.u-ordered_list li {
+  padding-bottom: .41667em
+}
+
+ol.disc,
+.u-unordered_list {
+  list-style-type: disc;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.25em
+}
+
+ol.disc li,
+.u-unordered_list li {
+  padding-bottom: .16667em
+}
+
+ol.disc.second_level,
+.u-unordered_list.second_level {
+  list-style-type: square
+}
+
+.u-unmarked_list {
+  padding: 0
+}
+
+.u-unmarked_list li {
+  list-style: none
+}
+
+.u-inline_list * {
+  display: inline-block
+}
+
+.group_inline,
+.u-group_inline {
+  display: table;
+  width: 100%
+}
+
+.group_inline-left,
+.u-group_inline-left {
+  display: table-cell;
+  padding-right: 8px
+}
+
+.group_inline-right,
+.u-group_inline-right {
+  display: table-cell;
+  vertical-align: middle
+}
+
+.u-hv_center_block {
+  position: relative
+}
+
+.u-hv_center_block-content {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%
+}
+
+.u-h_center_block,
+.school-student-stats-col .school-student-time {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.u-v_center_block {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%
+}
+
+.u-align_l {
+  text-align: left
+}
+
+.u-align_r {
+  text-align: right
+}
+
+.u-align_c {
+  text-align: center
+}
