@@ -12,7 +12,7 @@ class DataContainer extends Component {
     data: [],
     search: ""
   };
-
+  b 
   componentDidMount() {
     this.searchColleges("");
   }
