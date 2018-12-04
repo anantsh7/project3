@@ -15,7 +15,7 @@ const CollegeDetail = props => (
     </div>
     <div className="results-card-headings">
       <div className="compare-wrapper">
-        <h1 data-bind="title"><a className="link" href="javascript:OpenWindow()">{props.name}</a></h1>
+        <h1 data-bind="title"><a className="link" href="/schools/:name">{props.name}</a></h1>
         <div className="compare-school">
           <button type="button" className="button button-compare_schools" data-bind="selected_school" aria-label="Add to Compare" data-school="compare-schools" aria-pressed="" data-school-id="196255" data-school-name={props.name} aria-describedby="tip-compare-add">
 <i className="fa fa-star tooltip-target"></i>
@@ -79,7 +79,7 @@ const CollegeDetail = props => (
       </figure>
     </div>
 
-    <a className="link link-more" data-bind="more_link" href="/school/?196255-SUNY-Downstate-Medical-Center">
+    <a className="link link-more" data-bind="more_link" href="/school/:name">
       View more details <i className="fa fa-chevron-right"></i>
     </a>
   </div>
