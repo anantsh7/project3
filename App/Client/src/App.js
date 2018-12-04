@@ -4,15 +4,17 @@ import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import DataContainer from "./Components/DataContainer";
 import Navbar from "./Components/Navbar";
+import ExtraDetail from "./Components/ExtraDetail";
 
 const App = () => (
   <Router>
     <div>
-      <Navbar/>
+      <Navbar />
       <Switch>
         <Route exact path="/" component={DataContainer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/school/:name" component={ExtraDetail} />
       </Switch>
     </div>
   </Router>

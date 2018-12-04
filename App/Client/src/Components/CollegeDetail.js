@@ -15,9 +15,9 @@ const CollegeDetail = props => (
     </div>
     <div className="results-card-headings">
       <div className="compare-wrapper">
-        <h1 data-bind="title"><a className="link" href="/school/?196255-SUNY-Downstate-Medical-Center">SUNY Downstate Medical Center</a></h1>
+        <h1 data-bind="title"><a className="link" href="javascript:OpenWindow()">{props.name}</a></h1>
         <div className="compare-school">
-          <button type="button" className="button button-compare_schools" data-bind="selected_school" aria-label="Add to Compare" data-school="compare-schools" aria-pressed="" data-school-id="196255" data-school-name="SUNY Downstate Medical Center" aria-describedby="tip-compare-add">
+          <button type="button" className="button button-compare_schools" data-bind="selected_school" aria-label="Add to Compare" data-school="compare-schools" aria-pressed="" data-school-id="196255" data-school-name={props.name} aria-describedby="tip-compare-add">
 <i className="fa fa-star tooltip-target"></i>
 <span className="sr-only">Add to Compare</span>
 </button>
@@ -25,11 +25,11 @@ const CollegeDetail = props => (
       </div>
       <ul className="school-info">
         <li className="location">
-          <span data-bind="city">Brooklyn</span>,
-          <span data-bind="state">NY</span>
+          <span data-bind="city">{props.city}</span>,
+          <span data-bind="state">{props.state}</span>
         </li>
         <li>
-          <span data-bind="size_number">338</span> undergraduates
+          <span data-bind="size_number">{props.all}</span> Undergraduates
         </li>
       </ul>
     </div>
@@ -37,7 +37,7 @@ const CollegeDetail = props => (
     <div className="school-meters">
 
       <figure className="meter">
-        <h2 className="figure-heading constrain_width" aria-describedby="tip-avg-cost-year" tabindex="0">
+        <h2 className="figure-heading constrain_width" aria-describedby="tip-avg-cost-year" tabIndex="0">
           Average<br/>Annual Cost
           <span className="tooltip-target u-new_line">
             <i className="fa fa-info-circle"></i>
@@ -46,12 +46,12 @@ const CollegeDetail = props => (
         <picc-meter className="cost no_data" data-bind="average_cost_meter" max="100000" value="" degree="3">
         <div className="picc-meter-bar" styles={{display: "none"}}></div></picc-meter>
         <figcaption>
-          <span data-bind="average_cost">--</span>
+          <span data-bind="average_cost">{props.cost}</span>
         </figcaption>
       </figure>
 
       <figure className="meter">
-        <h2 className="figure-heading constrain_width" aria-describedby="tip-graduation-rate" tabindex="0">
+        <h2 className="figure-heading constrain_width" aria-describedby="tip-graduation-rate" tabIndex="0">
           Graduation <br/>Rate
           <span className="tooltip-target u-new_line">
             <i className="fa fa-info-circle"></i>
@@ -65,7 +65,7 @@ const CollegeDetail = props => (
       </figure>
 
       <figure className="meter">
-        <h2 className="figure-heading constrain_width" aria-describedby="tip-avg-salary" tabindex="0" data-bind="branch_campus" data-definition="default">
+        <h2 className="figure-heading constrain_width" aria-describedby="tip-avg-salary" tabIndex="0" data-bind="branch_campus" data-definition="default">
           Salary After<br/>Attending
           <span className="tooltip-target u-new_line">
             <i className="fa fa-info-circle"></i>

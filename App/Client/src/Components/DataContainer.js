@@ -21,6 +21,7 @@ class DataContainer extends Component {
     API.search(query)
       .then(res => {
         var dataObj = {
+          id:res.data.results[0].id,
           school: res.data.results[0].school,
           latest: res.data.results[0].latest,
         }
@@ -66,7 +67,9 @@ class DataContainer extends Component {
                 <CollegeDetail
                   name={res.school.name}
                   city={res.school.city}
-                  zip={res.school.zip}
+                  state={res.school.state}
+                  all={res.latest.student.enrollment.all}
+                  cost={res.latest.cost.attendance.academic_year}
                 />
             </Card>
           </Col>
