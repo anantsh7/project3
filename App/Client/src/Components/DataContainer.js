@@ -6,13 +6,14 @@ import Card from "./Card";
 import SearchForm from "./SearchForm";
 import CollegeDetail from "./CollegeDetail";
 import API from "../utils/API";
+import { searchColleges } from "../services/getSchoolInfo"
 
 class DataContainer extends Component {
   state = {
     data: [],
     search: ""
   };
-  b 
+
   componentDidMount() {
     this.searchColleges("");
   }
@@ -21,7 +22,7 @@ class DataContainer extends Component {
     API.search(query)
       .then(res => {
         var dataObj = {
-          id:res.data.results[0].id,
+          id: res.data.results[0].id,
           school: res.data.results[0].school,
           latest: res.data.results[0].latest,
         }
@@ -51,7 +52,7 @@ class DataContainer extends Component {
     return (
       <Container>
         <Row>
-        <Col size="md-12">
+          <Col size="md-12">
             <Card heading="Search">
               <SearchForm
                 value={this.state.search}
@@ -61,9 +62,9 @@ class DataContainer extends Component {
             </Card>
           </Col>
           {this.state.data.length ? (this.state.data.map(res => (
-          <Col size="md-4">
-            <Card
-              heading="">
+            <Col size="md-4">
+              <Card
+                heading="">
                 <CollegeDetail
                   name={res.school.name}
                   city={res.school.city}
@@ -71,9 +72,9 @@ class DataContainer extends Component {
                   all={res.latest.student.enrollment.all}
                   cost={res.latest.cost.attendance.academic_year}
                 />
-            </Card>
-          </Col>
-          ))) : ""} 
+              </Card>
+            </Col>
+          ))) : ""}
         </Row>
       </Container>
     );

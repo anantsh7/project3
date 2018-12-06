@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CollegeDetail = props => (
   
@@ -15,7 +16,7 @@ const CollegeDetail = props => (
     </div>
     <div className="results-card-headings">
       <div className="compare-wrapper">
-        <h1 data-bind="title"><a className="link" href="/schools/:name">{props.name}</a></h1>
+        <Link to={'/school/'+ props.name}>{props.name}</Link>
         <div className="compare-school">
           <button type="button" className="button button-compare_schools" data-bind="selected_school" aria-label="Add to Compare" data-school="compare-schools" aria-pressed="" data-school-id="196255" data-school-name={props.name} aria-describedby="tip-compare-add">
 <i className="fa fa-star tooltip-target"></i>
