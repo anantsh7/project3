@@ -1,3 +1,4 @@
+@import url(fonts.css);@import url(fonts.css);
 html,
 body,
 div,
@@ -1655,4 +1656,10 @@ picc-meter.debt.above_average .picc-meter-line:after {
 
 picc-meter.demographics .picc-meter-bar {
   background-color: #77b713
+}
+
+a.link {
+  color: green; 
+  text-align: center;
+
 }

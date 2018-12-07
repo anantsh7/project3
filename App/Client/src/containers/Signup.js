@@ -6,7 +6,10 @@ class Login extends Component {
   state = {
     success: false,
     username: "",
-    password: ""
+    password: "",
+    error: {
+      message: ""
+    }
   }
   
   handleInputChange = e => {
@@ -26,7 +29,10 @@ class Login extends Component {
         this.setState({ success: res.data })
 
       })
-      .catch(err => console.log(err.response.data));
+      .catch(error => { 
+        console.log(error)
+        this.setState({error});
+      });
   }
 
   render() {
@@ -65,7 +71,9 @@ class Login extends Component {
 
             <button type="submit" className="btn btn-success" onClick={this.register}>Sign Up!</button>
           </form>
-
+        </div>
+        <div>
+          {this.state.error.message}
         </div>
       </div>
     )

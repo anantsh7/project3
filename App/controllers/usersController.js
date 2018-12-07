@@ -52,7 +52,8 @@ module.exports = {
       });
   },
   logout: function(req, res) {
-    req.logout();
+    User.logout();
+    isLoggedin = false;
     const redirectPath = process.env.NODE_ENV === "production" ? "/" : "http://localhost:3000/";
     res.redirect(redirectPath);
   }

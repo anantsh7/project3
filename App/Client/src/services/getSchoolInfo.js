@@ -1,6 +1,6 @@
 import API from "../utils/API"
 
-  export function searchColleges (query)  {
+  export default searchColleges = query => {
     API.search(query)
       .then(res => {
         var dataObj = {
@@ -16,3 +16,7 @@ import API from "../utils/API"
       })
       .catch(err => console.log(err));
   };
+
+  module.export = {
+    searchColleges
+  }

@@ -33,6 +33,7 @@ class Login extends Component {
   render() {
     // If user is logged in, take them to main page
     if (this.state.isLoggedIn) {
+      sessionStorage.setItem("isAuthenticated", 1)
       return <Redirect to="/"/>
     }
 

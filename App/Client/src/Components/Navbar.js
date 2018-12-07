@@ -3,7 +3,7 @@ import {Link, NavLink} from "react-router-dom";
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <Link className="navbar-brand" to="/">Navbar</Link>
+    <Link className="navbar-brand" to="/">Anant Sharma Inc.</Link>
     <div className="collapse navbar-collapse">
       <div className="navbar-nav">
         <li className="nav-item active">
@@ -16,7 +16,7 @@ const Navbar = () => (
           <NavLink className="nav-link" to="/login">Login</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/api/users/logout">Logout</NavLink>
+          <NavLink className="nav-link" to="/logout">Logout</NavLink>
         </li>
       </div>
     </div>

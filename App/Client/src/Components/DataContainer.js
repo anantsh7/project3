@@ -6,7 +6,6 @@ import Card from "./Card";
 import SearchForm from "./SearchForm";
 import CollegeDetail from "./CollegeDetail";
 import API from "../utils/API";
-import { searchColleges } from "../services/getSchoolInfo"
 
 class DataContainer extends Component {
   state = {
