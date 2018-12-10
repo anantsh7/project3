@@ -35,6 +35,10 @@ const CollegeDetail = props => (
         </ul>
       </div>
       <Link className="link" to={'/school/' + props.name}>View More Details</Link>
+      <h6>Login required to view more details</h6>
+      <Link className="link" to="/login">Login</Link>
+      <br></br>
+      <Link className="link" to="/signup">Signup</Link>
     </div>
   </div>
 );
